@@ -8,7 +8,7 @@ function initMap() {
   geocoder = new google.maps.Geocoder();
 
   // Geocodificar la direccion usando el codigo de direccion
-  geocoder.geocode({ address: "Avenida de Requejo, 33, 49029 Zamora" }, (results, status) => {
+  geocoder.geocode({ address: "adress" }, (results, status) => {
     if (status === "OK") {
       const location = results[0].geometry.location;// Coordenadas obtenidas de la direccion
       
