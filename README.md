@@ -1,4 +1,5 @@
 Description
+
 This project provides a client-side solution for geolocation services using the Google Maps API. The app allows users to perform the following tasks:
 
 Obtain location data from an address: Given a postal address, the app retrieves the location data (latitude, longitude) and displays it on a map.
@@ -15,12 +16,15 @@ To use this app, you need a valid API key from Google. You can obtain it by foll
 Go to Google Maps Platform.
 Register for an API key.
 Replace the placeholder in the project code with your actual API key.
+
 Installation
 Clone or download this repository.
 Open the project folder in your preferred code editor.
 Make sure to replace the placeholder API key in the script with your own valid API key from Google.
 Open index.html in your browser to view and interact with the app.
+
 Features
+
 Address Geolocation: Enter a postal address to find its geographical coordinates and display the location on a Google map.
 Distance and Time Calculation: Input two locations and choose a mode of transport to calculate distance and travel time.
 Query Logging: All interactions are stored locally for easy retrieval.
