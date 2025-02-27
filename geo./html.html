@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Práctica de Geolocalización</title>
+  <link rel="stylesheet" href="css.css" />
+  <style>
+    #map { height: 80vh; width: 100%; }
+    body { font-family: Arial, sans-serif; padding: 20px; }
+    .result-container {
+      margin-top: 20px;
+      background-color: #f3abb6;
+      padding: 15px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(247, 77, 125, 0.1);
+    }
+  </style>
+</head>
+<body>
+  <h2>Práctica de Geolocalización </h2>
+
+  <!-- Buscar Direccion -->
+  <section>
+    <h3>Buscar Dirección</h3>
+    <input type="text" id="address" placeholder="Ingrese una dirección postal">
+    <button onclick="findLocation()">Buscar Localización</button>
+  </section>
+
+  <!-- Calcular Ruta -->
+  <section>
+    <h3>Calcular Distancia y Tiempo entre Dos Lugares</h3>
+    <input type="text" id="origin" placeholder="Dirección de origen">
+    <input type="text" id="destination" placeholder="Dirección de destino">
+    <select id="travelMode">
+      <option value="DRIVING">Conducir</option>
+      <option value="BICYCLING">Bicicleta</option>
+      <option value="TRANSIT">Transporte Público</option>
+      <option value="WALKING">A pie</option>
+    </select>
+    <button onclick="calculateRoute()">Calcular Ruta</button>
+  </section>
+
+  <!-- Resultados de la consulta -->
+  <div class="result-container" id="routeResult" style="display:none;">
+    <h4>Resultado de la Ruta:</h4>
+    <p><strong>Distancia:</strong> <span id="routeDistance"></span></p>
+    <p><strong>Tiempo Estimado:</strong> <span id="routeDuration"></span></p>
+  </div>
+
+  <!-- Mapa -->
+  <div id="map"></div>
+
+  <!-- Ver Log -->
+  <section>
+    <h3>Historial De Consultas</h3>
+    <button onclick="showLogInPage()">Ver Log</button>
+    <div id="logContainer"></div>
+  </section>
+
+  
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDw35Olb6kKtZ-tNQkgxXy4vXHFimrT-po&libraries=places&callback=initMap" async defer></script>
+  <script src="jv.js"></script>
+</body>
+</html>
